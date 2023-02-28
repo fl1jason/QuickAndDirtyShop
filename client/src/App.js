@@ -45,39 +45,39 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <CartProvider>
-      <Router>
-        <Layout>
+        <Router>
+          <Layout>
 
             <Routes>
-              <Route 
+              <Route
                 path="/"
                 element={<Home />}
               />
-              <Route 
+              <Route
                 path="/login"
                 element={<Login />}
               />
-              <Route 
+              <Route
                 path="/signup"
                 element={<Signup />}
               />
-              <Route 
+              <Route
                 path="/basket"
                 element={<Basket />}
               />
-              <Route 
+              <Route
                 path="/me"
                 element={<Home />}
               />
-              <Route 
+              <Route
                 path="/profiles/:username"
                 element={<Profile />}
               />
-              <Route 
+              <Route
                 path="/category/:category"
                 element={<ProductList />}
               />
-              <Route 
+              <Route
                 path="/product/:product"
                 element={<Product />}
               />
@@ -85,7 +85,7 @@ function App() {
 
           </Layout>
 
-      </Router>
+        </Router>
       </CartProvider>
     </ApolloProvider>
   );

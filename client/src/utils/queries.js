@@ -38,6 +38,19 @@ query Category($name: String!) {
 }
 `;
 
+export const QUERY_SINGLE_PRODUCT = gql`
+query Product($productId: ID!) {
+  id
+  product(productId: $productId) {
+    createdAt
+    description
+    image
+    price
+    title
+  }
+}
+`;
+
 export const QUERY_FEATURED_PRODUCTS = gql`
 query Products {
   products {
