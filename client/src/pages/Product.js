@@ -13,7 +13,10 @@ const Product = () => {
 
   const { onAddToCart } = useCart()
 
+  const params = useParams();
   const { productId } = useParams();
+
+  console.log('params: ', params)
 
   const { loading, data } = useQuery(QUERY_SINGLE_PRODUCT, {
     // pass URL parameter
@@ -26,7 +29,7 @@ const Product = () => {
 
   return (
     <>
-      <div className='w-75 border m-2 p-5'>
+      <div className='p-5 m-2 border w-75'>
         <h1>{productTitle}</h1>
         <div className='section-title'>
 
@@ -34,7 +37,7 @@ const Product = () => {
 
         </div>
       </div>
-      <div className='w-25 border m-2 p-5'>
+      <div className='p-5 m-2 border w-25'>
         <div className='section-title'>
           Browse the Shop
         </div>

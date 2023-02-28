@@ -40,8 +40,8 @@ query Category($name: String!) {
 
 export const QUERY_SINGLE_PRODUCT = gql`
 query Product($productId: ID!) {
-  id
   product(productId: $productId) {
+    _id
     createdAt
     description
     image
